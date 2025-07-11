@@ -1,0 +1,17 @@
+2025-07-11 11:19:11,488 ERROR org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - Terminating TaskManagerRunner with exit code 1.
+java.lang.IllegalAccessError: class org.apache.flink.util.NetUtils (in unnamed module @0x69a10787) cannot access class sun.net.util.IPAddressUtil (in module java.base) because module java.base does not export sun.net.util to unnamed module @0x69a10787
+	at org.apache.flink.util.NetUtils.unresolvedHostToNormalizedString(NetUtils.java:207) ~[flink-dist-1.17.2.jar:1.17.2]
+	at org.apache.flink.util.NetUtils.unresolvedHostAndPortToNormalizedString(NetUtils.java:235) ~[flink-dist-1.17.2.jar:1.17.2]
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcServiceUtils.getRpcUrl(AkkaRpcServiceUtils.java:171) ~[?:?]
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcServiceUtils.getRpcUrl(AkkaRpcServiceUtils.java:136) ~[?:?]
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcSystem.getRpcUrl(AkkaRpcSystem.java:59) ~[?:?]
+	at org.apache.flink.runtime.rpc.akka.CleanupOnCloseRpcSystem.getRpcUrl(CleanupOnCloseRpcSystem.java:90) ~[flink-dist-1.17.2.jar:1.17.2]
+	at org.apache.flink.runtime.highavailability.HighAvailabilityServicesUtils.createHighAvailabilityServices(HighAvailabilityServicesUtils.java:117) ~[flink-dist-1.17.2.jar:1.17.2]
+	at org.apache.flink.runtime.taskexecutor.TaskManagerRunner.startTaskManagerRunnerServices(TaskManagerRunner.java:195) ~[flink-dist-1.17.2.jar:1.17.2]
+	at org.apache.flink.runtime.taskexecutor.TaskManagerRunner.start(TaskManagerRunner.java:293) ~[flink-dist-1.17.2.jar:1.17.2]
+	at org.apache.flink.runtime.taskexecutor.TaskManagerRunner.runTaskManager(TaskManagerRunner.java:486) ~[flink-dist-1.17.2.jar:1.17.2]
+	at org.apache.flink.runtime.taskexecutor.TaskManagerRunner.lambda$runTaskManagerProcessSecurely$5(TaskManagerRunner.java:530) ~[flink-dist-1.17.2.jar:1.17.2]
+	at org.apache.flink.runtime.security.contexts.NoOpSecurityContext.runSecured(NoOpSecurityContext.java:28) ~[flink-dist-1.17.2.jar:1.17.2]
+	at org.apache.flink.runtime.taskexecutor.TaskManagerRunner.runTaskManagerProcessSecurely(TaskManagerRunner.java:530) [flink-dist-1.17.2.jar:1.17.2]
+	at org.apache.flink.runtime.taskexecutor.TaskManagerRunner.runTaskManagerProcessSecurely(TaskManagerRunner.java:510) [flink-dist-1.17.2.jar:1.17.2]
+	at org.apache.flink.runtime.taskexecutor.TaskManagerRunner.main(TaskManagerRunner.java:468) [flink-dist-1.17.2.jar:1.17.2]

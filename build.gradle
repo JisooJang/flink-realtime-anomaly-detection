@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'com.kakao.ticket.application'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.apache.flink:flink-streaming-java:1.17.2'
+    implementation 'org.apache.flink:flink-clients:1.17.2'
+    implementation 'org.apache.flink:flink-statebackend-rocksdb:1.17.2'
+    implementation 'org.apache.flink:flink-connector-kafka:1.17.2'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.17.1'
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+application {
+    mainClass = 'com.kakao.ticket.application.Main'
+    applicationDefaultJvmArgs = [
+        '--add-opens', 'java.base/java.util=ALL-UNNAMED',
+        '--add-opens', 'java.base/java.lang=ALL-UNNAMED'
+    ]
+}

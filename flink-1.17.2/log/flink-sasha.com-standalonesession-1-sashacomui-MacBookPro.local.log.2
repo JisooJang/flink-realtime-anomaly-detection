@@ -1,0 +1,37 @@
+2025-07-11 11:20:20,170 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - Shutting StandaloneSessionClusterEntrypoint down with application status FAILED. Diagnostics java.lang.IllegalAccessError: class org.apache.flink.util.NetUtils (in unnamed module @0x11c20519) cannot access class sun.net.util.IPAddressUtil (in module java.base) because module java.base does not export sun.net.util to unnamed module @0x11c20519
+	at org.apache.flink.util.NetUtils.unresolvedHostToNormalizedString(NetUtils.java:207)
+	at org.apache.flink.util.NetUtils.unresolvedHostAndPortToNormalizedString(NetUtils.java:235)
+	at org.apache.flink.runtime.rpc.akka.AkkaBootstrapTools.startRemoteActorSystem(AkkaBootstrapTools.java:167)
+	at org.apache.flink.runtime.rpc.akka.AkkaBootstrapTools.startRemoteActorSystem(AkkaBootstrapTools.java:112)
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcServiceUtils$AkkaRpcServiceBuilder.createAndStart(AkkaRpcServiceUtils.java:358)
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcServiceUtils$AkkaRpcServiceBuilder.createAndStart(AkkaRpcServiceUtils.java:327)
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcServiceUtils$AkkaRpcServiceBuilder.createAndStart(AkkaRpcServiceUtils.java:247)
+	at org.apache.flink.runtime.rpc.RpcUtils.createRemoteRpcService(RpcUtils.java:158)
+	at org.apache.flink.runtime.entrypoint.ClusterEntrypoint.initializeServices(ClusterEntrypoint.java:364)
+	at org.apache.flink.runtime.entrypoint.ClusterEntrypoint.runCluster(ClusterEntrypoint.java:282)
+	at org.apache.flink.runtime.entrypoint.ClusterEntrypoint.lambda$startCluster$1(ClusterEntrypoint.java:232)
+	at org.apache.flink.runtime.security.contexts.NoOpSecurityContext.runSecured(NoOpSecurityContext.java:28)
+	at org.apache.flink.runtime.entrypoint.ClusterEntrypoint.startCluster(ClusterEntrypoint.java:229)
+	at org.apache.flink.runtime.entrypoint.ClusterEntrypoint.runClusterEntrypoint(ClusterEntrypoint.java:732)
+	at org.apache.flink.runtime.entrypoint.StandaloneSessionClusterEntrypoint.main(StandaloneSessionClusterEntrypoint.java:59)
+.
+2025-07-11 11:20:20,184 ERROR org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - Could not start cluster entrypoint StandaloneSessionClusterEntrypoint.
+org.apache.flink.runtime.entrypoint.ClusterEntrypointException: Failed to initialize the cluster entrypoint StandaloneSessionClusterEntrypoint.
+	at org.apache.flink.runtime.entrypoint.ClusterEntrypoint.startCluster(ClusterEntrypoint.java:255) ~[flink-dist-1.17.2.jar:1.17.2]
+	at org.apache.flink.runtime.entrypoint.ClusterEntrypoint.runClusterEntrypoint(ClusterEntrypoint.java:732) [flink-dist-1.17.2.jar:1.17.2]
+	at org.apache.flink.runtime.entrypoint.StandaloneSessionClusterEntrypoint.main(StandaloneSessionClusterEntrypoint.java:59) [flink-dist-1.17.2.jar:1.17.2]
+Caused by: java.lang.IllegalAccessError: class org.apache.flink.util.NetUtils (in unnamed module @0x11c20519) cannot access class sun.net.util.IPAddressUtil (in module java.base) because module java.base does not export sun.net.util to unnamed module @0x11c20519
+	at org.apache.flink.util.NetUtils.unresolvedHostToNormalizedString(NetUtils.java:207) ~[flink-dist-1.17.2.jar:1.17.2]
+	at org.apache.flink.util.NetUtils.unresolvedHostAndPortToNormalizedString(NetUtils.java:235) ~[flink-dist-1.17.2.jar:1.17.2]
+	at org.apache.flink.runtime.rpc.akka.AkkaBootstrapTools.startRemoteActorSystem(AkkaBootstrapTools.java:167) ~[?:?]
+	at org.apache.flink.runtime.rpc.akka.AkkaBootstrapTools.startRemoteActorSystem(AkkaBootstrapTools.java:112) ~[?:?]
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcServiceUtils$AkkaRpcServiceBuilder.createAndStart(AkkaRpcServiceUtils.java:358) ~[?:?]
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcServiceUtils$AkkaRpcServiceBuilder.createAndStart(AkkaRpcServiceUtils.java:327) ~[?:?]
+	at org.apache.flink.runtime.rpc.akka.AkkaRpcServiceUtils$AkkaRpcServiceBuilder.createAndStart(AkkaRpcServiceUtils.java:247) ~[?:?]
+	at org.apache.flink.runtime.rpc.RpcUtils.createRemoteRpcService(RpcUtils.java:158) ~[flink-dist-1.17.2.jar:1.17.2]
+	at org.apache.flink.runtime.entrypoint.ClusterEntrypoint.initializeServices(ClusterEntrypoint.java:364) ~[flink-dist-1.17.2.jar:1.17.2]
+	at org.apache.flink.runtime.entrypoint.ClusterEntrypoint.runCluster(ClusterEntrypoint.java:282) ~[flink-dist-1.17.2.jar:1.17.2]
+	at org.apache.flink.runtime.entrypoint.ClusterEntrypoint.lambda$startCluster$1(ClusterEntrypoint.java:232) ~[flink-dist-1.17.2.jar:1.17.2]
+	at org.apache.flink.runtime.security.contexts.NoOpSecurityContext.runSecured(NoOpSecurityContext.java:28) ~[flink-dist-1.17.2.jar:1.17.2]
+	at org.apache.flink.runtime.entrypoint.ClusterEntrypoint.startCluster(ClusterEntrypoint.java:229) ~[flink-dist-1.17.2.jar:1.17.2]
+	... 2 more

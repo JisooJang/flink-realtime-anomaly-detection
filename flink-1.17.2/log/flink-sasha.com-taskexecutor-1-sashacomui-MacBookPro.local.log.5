@@ -1,0 +1,272 @@
+2025-07-11 11:24:04,439 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - --------------------------------------------------------------------------------
+2025-07-11 11:24:04,440 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  Preconfiguration: 
+2025-07-11 11:24:04,440 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - 
+
+
+RESOURCE_PARAMS extraction logs:
+jvm_params: -Xmx536870902 -Xms536870902 -XX:MaxDirectMemorySize=268435458 -XX:MaxMetaspaceSize=268435456
+dynamic_configs: -D taskmanager.memory.network.min=134217730b -D taskmanager.cpu.cores=1.0 -D taskmanager.memory.task.off-heap.size=0b -D taskmanager.memory.jvm-metaspace.size=268435456b -D external-resources=none -D taskmanager.memory.jvm-overhead.min=201326592b -D taskmanager.memory.framework.off-heap.size=134217728b -D taskmanager.memory.network.max=134217730b -D taskmanager.memory.framework.heap.size=134217728b -D taskmanager.memory.managed.size=536870920b -D taskmanager.memory.task.heap.size=402653174b -D taskmanager.numberOfTaskSlots=1 -D taskmanager.memory.jvm-overhead.max=201326592b
+logs: WARNING: sun.reflect.Reflection.getCallerClass is not supported. This will impact performance.
+INFO  [] - Loading configuration property: env.java.opts.client, --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/sun.net.util=ALL-UNNAMED
+INFO  [] - Loading configuration property: taskmanager.memory.process.size, 1728m
+INFO  [] - Loading configuration property: env.java.opts.jobmanager, --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/sun.net.util=ALL-UNNAMED
+INFO  [] - Loading configuration property: taskmanager.bind-host, localhost
+INFO  [] - Loading configuration property: jobmanager.execution.failover-strategy, region
+INFO  [] - Loading configuration property: jobmanager.rpc.address, localhost
+INFO  [] - Loading configuration property: jobmanager.memory.process.size, 1600m
+INFO  [] - Loading configuration property: jobmanager.rpc.port, 6123
+INFO  [] - Loading configuration property: rest.bind-address, 0.0.0.0
+INFO  [] - Loading configuration property: rest.port, 8081
+INFO  [] - Loading configuration property: jobmanager.bind-host, localhost
+INFO  [] - Loading configuration property: taskmanager.host, localhost
+INFO  [] - Loading configuration property: parallelism.default, 1
+INFO  [] - Loading configuration property: taskmanager.numberOfTaskSlots, 1
+INFO  [] - Loading configuration property: rest.address, localhost
+INFO  [] - Loading configuration property: env.java.opts.taskmanager, --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/sun.net.util=ALL-UNNAMED
+INFO  [] - The derived from fraction jvm overhead memory (172.800mb (181193935 bytes)) is less than its min value 192.000mb (201326592 bytes), min value will be used instead
+INFO  [] - Final TaskExecutor Memory configuration:
+INFO  [] -   Total Process Memory:          1.688gb (1811939328 bytes)
+INFO  [] -     Total Flink Memory:          1.250gb (1342177280 bytes)
+INFO  [] -       Total JVM Heap Memory:     512.000mb (536870902 bytes)
+INFO  [] -         Framework:               128.000mb (134217728 bytes)
+INFO  [] -         Task:                    384.000mb (402653174 bytes)
+INFO  [] -       Total Off-heap Memory:     768.000mb (805306378 bytes)
+INFO  [] -         Managed:                 512.000mb (536870920 bytes)
+INFO  [] -         Total JVM Direct Memory: 256.000mb (268435458 bytes)
+INFO  [] -           Framework:             128.000mb (134217728 bytes)
+INFO  [] -           Task:                  0 bytes
+INFO  [] -           Network:               128.000mb (134217730 bytes)
+INFO  [] -     JVM Metaspace:               256.000mb (268435456 bytes)
+INFO  [] -     JVM Overhead:                192.000mb (201326592 bytes)
+
+2025-07-11 11:24:04,440 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - --------------------------------------------------------------------------------
+2025-07-11 11:24:04,440 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  Starting TaskManager (Version: 1.17.2, Scala: 2.12, Rev:c0027e5, Date:2023-11-09T13:24:38+01:00)
+2025-07-11 11:24:04,440 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  OS current user: sasha.com
+2025-07-11 11:24:04,440 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  Current Hadoop/Kerberos user: <no hadoop dependency found>
+2025-07-11 11:24:04,440 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  JVM: Java HotSpot(TM) 64-Bit Server VM - Oracle Corporation - 21/21.0.6+8-LTS-188
+2025-07-11 11:24:04,440 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  Arch: aarch64
+2025-07-11 11:24:04,440 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  Maximum heap size: 512 MiBytes
+2025-07-11 11:24:04,440 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  JAVA_HOME: (not set)
+2025-07-11 11:24:04,440 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  No Hadoop Dependency available
+2025-07-11 11:24:04,440 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  JVM Options:
+2025-07-11 11:24:04,440 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -Xmx536870902
+2025-07-11 11:24:04,440 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -Xms536870902
+2025-07-11 11:24:04,440 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -XX:MaxDirectMemorySize=268435458
+2025-07-11 11:24:04,440 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -XX:MaxMetaspaceSize=268435456
+2025-07-11 11:24:04,440 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --add-opens=java.base/java.util=ALL-UNNAMED
+2025-07-11 11:24:04,440 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --add-opens=java.base/java.lang=ALL-UNNAMED
+2025-07-11 11:24:04,441 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --add-opens=java.base/sun.net.util=ALL-UNNAMED
+2025-07-11 11:24:04,441 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -Dlog.file=/Users/sasha.com/flink_study/flink-demo/flink-1.17.2/log/flink-sasha.com-taskexecutor-1-sashacomui-MacBookPro.local.log
+2025-07-11 11:24:04,441 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -Dlog4j.configuration=file:/Users/sasha.com/flink_study/flink-demo/flink-1.17.2/conf/log4j.properties
+2025-07-11 11:24:04,441 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -Dlog4j.configurationFile=file:/Users/sasha.com/flink_study/flink-demo/flink-1.17.2/conf/log4j.properties
+2025-07-11 11:24:04,441 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -Dlogback.configurationFile=file:/Users/sasha.com/flink_study/flink-demo/flink-1.17.2/conf/logback.xml
+2025-07-11 11:24:04,441 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  Program Arguments:
+2025-07-11 11:24:04,441 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --configDir
+2025-07-11 11:24:04,441 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     /Users/sasha.com/flink_study/flink-demo/flink-1.17.2/conf
+2025-07-11 11:24:04,441 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+2025-07-11 11:24:04,441 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.network.min=134217730b
+2025-07-11 11:24:04,441 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+2025-07-11 11:24:04,441 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.cpu.cores=1.0
+2025-07-11 11:24:04,441 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+2025-07-11 11:24:04,441 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.task.off-heap.size=0b
+2025-07-11 11:24:04,441 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+2025-07-11 11:24:04,441 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.jvm-metaspace.size=268435456b
+2025-07-11 11:24:04,442 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+2025-07-11 11:24:04,442 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     external-resources=none
+2025-07-11 11:24:04,442 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+2025-07-11 11:24:04,442 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.jvm-overhead.min=201326592b
+2025-07-11 11:24:04,442 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+2025-07-11 11:24:04,442 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.framework.off-heap.size=134217728b
+2025-07-11 11:24:04,442 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+2025-07-11 11:24:04,442 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.network.max=134217730b
+2025-07-11 11:24:04,442 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+2025-07-11 11:24:04,442 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.framework.heap.size=134217728b
+2025-07-11 11:24:04,442 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+2025-07-11 11:24:04,442 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.managed.size=536870920b
+2025-07-11 11:24:04,442 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+2025-07-11 11:24:04,442 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.task.heap.size=402653174b
+2025-07-11 11:24:04,442 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+2025-07-11 11:24:04,442 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.numberOfTaskSlots=1
+2025-07-11 11:24:04,442 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+2025-07-11 11:24:04,442 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.jvm-overhead.max=201326592b
+2025-07-11 11:24:04,442 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  Classpath: /Users/sasha.com/flink_study/flink-demo/flink-1.17.2/lib/flink-cep-1.17.2.jar:/Users/sasha.com/flink_study/flink-demo/flink-1.17.2/lib/flink-connector-files-1.17.2.jar:/Users/sasha.com/flink_study/flink-demo/flink-1.17.2/lib/flink-csv-1.17.2.jar:/Users/sasha.com/flink_study/flink-demo/flink-1.17.2/lib/flink-json-1.17.2.jar:/Users/sasha.com/flink_study/flink-demo/flink-1.17.2/lib/flink-scala_2.12-1.17.2.jar:/Users/sasha.com/flink_study/flink-demo/flink-1.17.2/lib/flink-table-api-java-uber-1.17.2.jar:/Users/sasha.com/flink_study/flink-demo/flink-1.17.2/lib/flink-table-planner-loader-1.17.2.jar:/Users/sasha.com/flink_study/flink-demo/flink-1.17.2/lib/flink-table-runtime-1.17.2.jar:/Users/sasha.com/flink_study/flink-demo/flink-1.17.2/lib/log4j-1.2-api-2.17.1.jar:/Users/sasha.com/flink_study/flink-demo/flink-1.17.2/lib/log4j-api-2.17.1.jar:/Users/sasha.com/flink_study/flink-demo/flink-1.17.2/lib/log4j-core-2.17.1.jar:/Users/sasha.com/flink_study/flink-demo/flink-1.17.2/lib/log4j-slf4j-impl-2.17.1.jar:/Users/sasha.com/flink_study/flink-demo/flink-1.17.2/lib/flink-dist-1.17.2.jar::::
+2025-07-11 11:24:04,442 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - --------------------------------------------------------------------------------
+2025-07-11 11:24:04,442 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - Registered UNIX signal handlers for [TERM, HUP, INT]
+2025-07-11 11:24:04,444 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - Maximum number of open file descriptors is 2147483647.
+2025-07-11 11:24:04,448 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: env.java.opts.client, --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/sun.net.util=ALL-UNNAMED
+2025-07-11 11:24:04,448 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.memory.process.size, 1728m
+2025-07-11 11:24:04,448 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: env.java.opts.jobmanager, --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/sun.net.util=ALL-UNNAMED
+2025-07-11 11:24:04,448 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.bind-host, localhost
+2025-07-11 11:24:04,448 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.execution.failover-strategy, region
+2025-07-11 11:24:04,448 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.rpc.address, localhost
+2025-07-11 11:24:04,448 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.memory.process.size, 1600m
+2025-07-11 11:24:04,448 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.rpc.port, 6123
+2025-07-11 11:24:04,448 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: rest.bind-address, 0.0.0.0
+2025-07-11 11:24:04,448 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: rest.port, 8081
+2025-07-11 11:24:04,448 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.bind-host, localhost
+2025-07-11 11:24:04,448 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.host, localhost
+2025-07-11 11:24:04,448 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: parallelism.default, 1
+2025-07-11 11:24:04,448 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.numberOfTaskSlots, 1
+2025-07-11 11:24:04,448 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: rest.address, localhost
+2025-07-11 11:24:04,448 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: env.java.opts.taskmanager, --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/sun.net.util=ALL-UNNAMED
+2025-07-11 11:24:04,448 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.network.min, 134217730b
+2025-07-11 11:24:04,448 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.jvm-metaspace.size, 268435456b
+2025-07-11 11:24:04,448 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.task.off-heap.size, 0b
+2025-07-11 11:24:04,448 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.cpu.cores, 1.0
+2025-07-11 11:24:04,448 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: external-resources, none
+2025-07-11 11:24:04,448 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.jvm-overhead.min, 201326592b
+2025-07-11 11:24:04,448 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.framework.off-heap.size, 134217728b
+2025-07-11 11:24:04,448 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.network.max, 134217730b
+2025-07-11 11:24:04,448 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.framework.heap.size, 134217728b
+2025-07-11 11:24:04,448 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.managed.size, 536870920b
+2025-07-11 11:24:04,448 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.task.heap.size, 402653174b
+2025-07-11 11:24:04,449 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.numberOfTaskSlots, 1
+2025-07-11 11:24:04,449 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.jvm-overhead.max, 201326592b
+2025-07-11 11:24:04,462 INFO  org.apache.flink.core.fs.FileSystem                          [] - Hadoop is not in the classpath/dependencies. The extended set of supported File Systems via Hadoop is not available.
+2025-07-11 11:24:04,467 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-statsd
+2025-07-11 11:24:04,469 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-prometheus
+2025-07-11 11:24:04,469 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-graphite
+2025-07-11 11:24:04,469 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: external-resource-gpu
+2025-07-11 11:24:04,469 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-jmx
+2025-07-11 11:24:04,470 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-influx
+2025-07-11 11:24:04,470 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-slf4j
+2025-07-11 11:24:04,470 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-datadog
+2025-07-11 11:24:04,476 INFO  org.apache.flink.runtime.state.changelog.StateChangelogStorageLoader [] - StateChangelogStorageLoader initialized with shortcut names {memory,filesystem}.
+2025-07-11 11:24:04,477 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-statsd
+2025-07-11 11:24:04,477 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-prometheus
+2025-07-11 11:24:04,477 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-graphite
+2025-07-11 11:24:04,477 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: external-resource-gpu
+2025-07-11 11:24:04,477 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-jmx
+2025-07-11 11:24:04,477 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-influx
+2025-07-11 11:24:04,477 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-slf4j
+2025-07-11 11:24:04,477 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-datadog
+2025-07-11 11:24:04,477 INFO  org.apache.flink.runtime.state.changelog.StateChangelogStorageLoader [] - StateChangelogStorageLoader initialized with shortcut names {memory,filesystem}.
+2025-07-11 11:24:04,485 INFO  org.apache.flink.runtime.security.modules.HadoopModuleFactory [] - Cannot create Hadoop Security Module because Hadoop cannot be found in the Classpath.
+2025-07-11 11:24:04,499 INFO  org.apache.flink.runtime.security.modules.JaasModule         [] - Jaas file will be created as /var/folders/c4/4714tbt150j3g0rdk167q0pm0000gn/T/jaas-18336960297896357677.conf.
+2025-07-11 11:24:04,501 INFO  org.apache.flink.runtime.security.contexts.HadoopSecurityContextFactory [] - Cannot install HadoopSecurityContext because Hadoop cannot be found in the Classpath.
+2025-07-11 11:24:04,622 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - Using configured hostname/address for TaskManager: localhost.
+2025-07-11 11:24:04,637 INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcServiceUtils        [] - Trying to start actor system, external address localhost:0, bind address localhost:0.
+2025-07-11 11:24:04,841 INFO  akka.event.slf4j.Slf4jLogger                                 [] - Slf4jLogger started
+2025-07-11 11:24:04,849 INFO  akka.remote.RemoteActorRefProvider                           [] - Akka Cluster not in use - enabling unsafe features anyway because `akka.remote.use-unsafe-remote-features-outside-cluster` has been enabled.
+2025-07-11 11:24:04,850 INFO  akka.remote.Remoting                                         [] - Starting remoting
+2025-07-11 11:24:04,900 INFO  akka.remote.Remoting                                         [] - Remoting started; listening on addresses :[akka.tcp://flink@localhost:51722]
+2025-07-11 11:24:04,933 INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcServiceUtils        [] - Actor system started at akka.tcp://flink@localhost:51722
+2025-07-11 11:24:04,940 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - Using working directory: WorkingDirectory(/var/folders/c4/4714tbt150j3g0rdk167q0pm0000gn/T/tm_localhost:51722-cac785)
+2025-07-11 11:24:04,943 INFO  org.apache.flink.runtime.metrics.MetricRegistryImpl          [] - No metrics reporter configured, no metrics will be exposed/reported.
+2025-07-11 11:24:04,944 INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcServiceUtils        [] - Trying to start actor system, external address localhost:0, bind address localhost:0.
+2025-07-11 11:24:04,949 INFO  akka.event.slf4j.Slf4jLogger                                 [] - Slf4jLogger started
+2025-07-11 11:24:04,950 INFO  akka.remote.RemoteActorRefProvider                           [] - Akka Cluster not in use - enabling unsafe features anyway because `akka.remote.use-unsafe-remote-features-outside-cluster` has been enabled.
+2025-07-11 11:24:04,951 INFO  akka.remote.Remoting                                         [] - Starting remoting
+2025-07-11 11:24:04,953 INFO  akka.remote.Remoting                                         [] - Remoting started; listening on addresses :[akka.tcp://flink-metrics@localhost:51723]
+2025-07-11 11:24:04,956 INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcServiceUtils        [] - Actor system started at akka.tcp://flink-metrics@localhost:51723
+2025-07-11 11:24:04,960 INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService             [] - Starting RPC endpoint for org.apache.flink.runtime.metrics.dump.MetricQueryService at akka://flink-metrics/user/rpc/MetricQueryService_localhost:51722-cac785 .
+2025-07-11 11:24:04,965 INFO  org.apache.flink.runtime.blob.PermanentBlobCache             [] - Created BLOB cache storage directory /var/folders/c4/4714tbt150j3g0rdk167q0pm0000gn/T/tm_localhost:51722-cac785/blobStorage
+2025-07-11 11:24:04,967 INFO  org.apache.flink.runtime.blob.TransientBlobCache             [] - Created BLOB cache storage directory /var/folders/c4/4714tbt150j3g0rdk167q0pm0000gn/T/tm_localhost:51722-cac785/blobStorage
+2025-07-11 11:24:04,968 INFO  org.apache.flink.runtime.externalresource.ExternalResourceUtils [] - Enabled external resources: []
+2025-07-11 11:24:04,968 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Loading delegation token receivers
+2025-07-11 11:24:04,969 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Delegation token receiver hadoopfs loaded and initialized
+2025-07-11 11:24:04,969 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Delegation token receiver hbase loaded and initialized
+2025-07-11 11:24:04,969 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-statsd
+2025-07-11 11:24:04,969 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-prometheus
+2025-07-11 11:24:04,969 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-graphite
+2025-07-11 11:24:04,969 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: external-resource-gpu
+2025-07-11 11:24:04,969 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-jmx
+2025-07-11 11:24:04,969 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-influx
+2025-07-11 11:24:04,969 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-slf4j
+2025-07-11 11:24:04,969 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-datadog
+2025-07-11 11:24:04,970 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Delegation token receivers loaded successfully
+2025-07-11 11:24:04,970 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - Starting TaskManager with ResourceID: localhost:51722-cac785
+2025-07-11 11:24:04,976 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerServices    [] - Temporary file directory '/var/folders/c4/4714tbt150j3g0rdk167q0pm0000gn/T': total 926 GB, usable 467 GB (50.43% usable)
+2025-07-11 11:24:04,977 INFO  org.apache.flink.runtime.io.disk.iomanager.IOManager         [] - Created a new FileChannelManager for spilling of task related data to disk (joins, sorting, ...). Used directories:
+	/var/folders/c4/4714tbt150j3g0rdk167q0pm0000gn/T/flink-io-b226046e-4eb5-47b4-a843-414db6125b79
+2025-07-11 11:24:04,980 INFO  org.apache.flink.runtime.io.network.netty.NettyConfig        [] - NettyConfig [server address: localhost/127.0.0.1, server port: 0, ssl enabled: false, memory segment size (bytes): 32768, transport type: AUTO, number of server threads: 1 (manual), number of client threads: 1 (manual), server connect backlog: 0 (use Netty's default), client connect timeout (sec): 120, send/receive buffer size (bytes): 0 (use Netty's default)]
+2025-07-11 11:24:05,000 INFO  org.apache.flink.runtime.io.network.NettyShuffleServiceFactory [] - Created a new FileChannelManager for storing result partitions of BLOCKING shuffles. Used directories:
+	/var/folders/c4/4714tbt150j3g0rdk167q0pm0000gn/T/flink-netty-shuffle-ae6d88e9-6de4-44d2-b2ee-a9379b4330c6
+2025-07-11 11:24:05,017 INFO  org.apache.flink.runtime.io.network.buffer.NetworkBufferPool [] - Allocated 128 MB for network buffer pool (number of memory segments: 4096, bytes per segment: 32768).
+2025-07-11 11:24:05,022 INFO  org.apache.flink.runtime.io.network.NettyShuffleEnvironment  [] - Starting the network environment and its components.
+2025-07-11 11:24:05,036 INFO  org.apache.flink.runtime.io.network.netty.NettyClient        [] - Transport type 'auto': using NIO.
+2025-07-11 11:24:05,040 INFO  org.apache.flink.runtime.io.network.netty.NettyClient        [] - Successful initialization (took 17 ms).
+2025-07-11 11:24:05,042 INFO  org.apache.flink.runtime.io.network.netty.NettyServer        [] - Transport type 'auto': using NIO.
+2025-07-11 11:24:05,061 INFO  org.apache.flink.runtime.io.network.netty.NettyServer        [] - Successful initialization (took 19 ms). Listening on SocketAddress /127.0.0.1:51724.
+2025-07-11 11:24:05,062 INFO  org.apache.flink.runtime.taskexecutor.KvStateService         [] - Starting the kvState service and its components.
+2025-07-11 11:24:05,072 INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService             [] - Starting RPC endpoint for org.apache.flink.runtime.taskexecutor.TaskExecutor at akka://flink/user/rpc/taskmanager_0 .
+2025-07-11 11:24:05,077 INFO  org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService [] - Start job leader service.
+2025-07-11 11:24:05,078 INFO  org.apache.flink.runtime.filecache.FileCache                 [] - User file cache uses directory /var/folders/c4/4714tbt150j3g0rdk167q0pm0000gn/T/flink-dist-cache-cc85d4b6-43c7-4a91-94f6-f7a9a22467ff
+2025-07-11 11:24:05,079 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Connecting to ResourceManager akka.tcp://flink@localhost:6123/user/rpc/resourcemanager_*(00000000000000000000000000000000).
+2025-07-11 11:24:05,103 WARN  akka.remote.transport.netty.NettyTransport                   [] - Remote connection to [localhost/127.0.0.1:6123] failed with java.net.ConnectException: Connection refused: localhost/127.0.0.1:6123
+2025-07-11 11:24:05,103 WARN  akka.remote.ReliableDeliverySupervisor                       [] - Association with remote system [akka.tcp://flink@localhost:6123] has failed, address is now gated for [50] ms. Reason: [Association failed with [akka.tcp://flink@localhost:6123]] Caused by: [java.net.ConnectException: Connection refused: localhost/127.0.0.1:6123]
+2025-07-11 11:24:05,108 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Could not resolve ResourceManager address akka.tcp://flink@localhost:6123/user/rpc/resourcemanager_*, retrying in 10000 ms: Could not connect to rpc endpoint under address akka.tcp://flink@localhost:6123/user/rpc/resourcemanager_*.
+2025-07-11 11:24:15,129 WARN  akka.remote.transport.netty.NettyTransport                   [] - Remote connection to [localhost/127.0.0.1:6123] failed with java.net.ConnectException: Connection refused: localhost/127.0.0.1:6123
+2025-07-11 11:24:15,129 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Could not resolve ResourceManager address akka.tcp://flink@localhost:6123/user/rpc/resourcemanager_*, retrying in 10000 ms: Could not connect to rpc endpoint under address akka.tcp://flink@localhost:6123/user/rpc/resourcemanager_*.
+2025-07-11 11:24:15,130 WARN  akka.remote.ReliableDeliverySupervisor                       [] - Association with remote system [akka.tcp://flink@localhost:6123] has failed, address is now gated for [50] ms. Reason: [Association failed with [akka.tcp://flink@localhost:6123]] Caused by: [java.net.ConnectException: Connection refused: localhost/127.0.0.1:6123]
+2025-07-11 11:24:25,155 WARN  akka.remote.transport.netty.NettyTransport                   [] - Remote connection to [localhost/127.0.0.1:6123] failed with java.net.ConnectException: Connection refused: localhost/127.0.0.1:6123
+2025-07-11 11:24:25,155 WARN  akka.remote.ReliableDeliverySupervisor                       [] - Association with remote system [akka.tcp://flink@localhost:6123] has failed, address is now gated for [50] ms. Reason: [Association failed with [akka.tcp://flink@localhost:6123]] Caused by: [java.net.ConnectException: Connection refused: localhost/127.0.0.1:6123]
+2025-07-11 11:24:25,155 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Could not resolve ResourceManager address akka.tcp://flink@localhost:6123/user/rpc/resourcemanager_*, retrying in 10000 ms: Could not connect to rpc endpoint under address akka.tcp://flink@localhost:6123/user/rpc/resourcemanager_*.
+2025-07-11 11:24:35,174 WARN  akka.remote.transport.netty.NettyTransport                   [] - Remote connection to [localhost/127.0.0.1:6123] failed with java.net.ConnectException: Connection refused: localhost/127.0.0.1:6123
+2025-07-11 11:24:35,175 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Could not resolve ResourceManager address akka.tcp://flink@localhost:6123/user/rpc/resourcemanager_*, retrying in 10000 ms: Could not connect to rpc endpoint under address akka.tcp://flink@localhost:6123/user/rpc/resourcemanager_*.
+2025-07-11 11:24:35,175 WARN  akka.remote.ReliableDeliverySupervisor                       [] - Association with remote system [akka.tcp://flink@localhost:6123] has failed, address is now gated for [50] ms. Reason: [Association failed with [akka.tcp://flink@localhost:6123]] Caused by: [java.net.ConnectException: Connection refused: localhost/127.0.0.1:6123]
+2025-07-11 11:24:45,191 WARN  akka.remote.transport.netty.NettyTransport                   [] - Remote connection to [localhost/127.0.0.1:6123] failed with java.net.ConnectException: Connection refused: localhost/127.0.0.1:6123
+2025-07-11 11:24:45,192 WARN  akka.remote.ReliableDeliverySupervisor                       [] - Association with remote system [akka.tcp://flink@localhost:6123] has failed, address is now gated for [50] ms. Reason: [Association failed with [akka.tcp://flink@localhost:6123]] Caused by: [java.net.ConnectException: Connection refused: localhost/127.0.0.1:6123]
+2025-07-11 11:24:45,192 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Could not resolve ResourceManager address akka.tcp://flink@localhost:6123/user/rpc/resourcemanager_*, retrying in 10000 ms: Could not connect to rpc endpoint under address akka.tcp://flink@localhost:6123/user/rpc/resourcemanager_*.
+2025-07-11 11:24:55,222 WARN  akka.remote.transport.netty.NettyTransport                   [] - Remote connection to [localhost/127.0.0.1:6123] failed with java.net.ConnectException: Connection refused: localhost/127.0.0.1:6123
+2025-07-11 11:24:55,222 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Could not resolve ResourceManager address akka.tcp://flink@localhost:6123/user/rpc/resourcemanager_*, retrying in 10000 ms: Could not connect to rpc endpoint under address akka.tcp://flink@localhost:6123/user/rpc/resourcemanager_*.
+2025-07-11 11:24:55,222 WARN  akka.remote.ReliableDeliverySupervisor                       [] - Association with remote system [akka.tcp://flink@localhost:6123] has failed, address is now gated for [50] ms. Reason: [Association failed with [akka.tcp://flink@localhost:6123]] Caused by: [java.net.ConnectException: Connection refused: localhost/127.0.0.1:6123]
+2025-07-11 11:25:05,242 WARN  akka.remote.transport.netty.NettyTransport                   [] - Remote connection to [localhost/127.0.0.1:6123] failed with java.net.ConnectException: Connection refused: localhost/127.0.0.1:6123
+2025-07-11 11:25:05,243 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Could not resolve ResourceManager address akka.tcp://flink@localhost:6123/user/rpc/resourcemanager_*, retrying in 10000 ms: Could not connect to rpc endpoint under address akka.tcp://flink@localhost:6123/user/rpc/resourcemanager_*.
+2025-07-11 11:25:05,243 WARN  akka.remote.ReliableDeliverySupervisor                       [] - Association with remote system [akka.tcp://flink@localhost:6123] has failed, address is now gated for [50] ms. Reason: [Association failed with [akka.tcp://flink@localhost:6123]] Caused by: [java.net.ConnectException: Connection refused: localhost/127.0.0.1:6123]
+2025-07-11 11:25:15,266 WARN  akka.remote.transport.netty.NettyTransport                   [] - Remote connection to [localhost/127.0.0.1:6123] failed with java.net.ConnectException: Connection refused: localhost/127.0.0.1:6123
+2025-07-11 11:25:15,267 WARN  akka.remote.ReliableDeliverySupervisor                       [] - Association with remote system [akka.tcp://flink@localhost:6123] has failed, address is now gated for [50] ms. Reason: [Association failed with [akka.tcp://flink@localhost:6123]] Caused by: [java.net.ConnectException: Connection refused: localhost/127.0.0.1:6123]
+2025-07-11 11:25:15,267 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Could not resolve ResourceManager address akka.tcp://flink@localhost:6123/user/rpc/resourcemanager_*, retrying in 10000 ms: Could not connect to rpc endpoint under address akka.tcp://flink@localhost:6123/user/rpc/resourcemanager_*.
+2025-07-11 11:25:25,294 WARN  akka.remote.ReliableDeliverySupervisor                       [] - Association with remote system [akka.tcp://flink@localhost:6123] has failed, address is now gated for [50] ms. Reason: [Association failed with [akka.tcp://flink@localhost:6123]] Caused by: [java.net.ConnectException: Connection refused: localhost/127.0.0.1:6123]
+2025-07-11 11:25:25,294 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Could not resolve ResourceManager address akka.tcp://flink@localhost:6123/user/rpc/resourcemanager_*, retrying in 10000 ms: Could not connect to rpc endpoint under address akka.tcp://flink@localhost:6123/user/rpc/resourcemanager_*.
+2025-07-11 11:25:25,296 WARN  akka.remote.transport.netty.NettyTransport                   [] - Remote connection to [localhost/127.0.0.1:6123] failed with java.net.ConnectException: Connection refused: localhost/127.0.0.1:6123
+2025-07-11 11:25:35,319 WARN  akka.remote.transport.netty.NettyTransport                   [] - Remote connection to [localhost/127.0.0.1:6123] failed with java.net.ConnectException: Connection refused: localhost/127.0.0.1:6123
+2025-07-11 11:25:35,319 WARN  akka.remote.ReliableDeliverySupervisor                       [] - Association with remote system [akka.tcp://flink@localhost:6123] has failed, address is now gated for [50] ms. Reason: [Association failed with [akka.tcp://flink@localhost:6123]] Caused by: [java.net.ConnectException: Connection refused: localhost/127.0.0.1:6123]
+2025-07-11 11:25:35,319 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Could not resolve ResourceManager address akka.tcp://flink@localhost:6123/user/rpc/resourcemanager_*, retrying in 10000 ms: Could not connect to rpc endpoint under address akka.tcp://flink@localhost:6123/user/rpc/resourcemanager_*.
+2025-07-11 11:25:45,332 WARN  akka.remote.transport.netty.NettyTransport                   [] - Remote connection to [localhost/127.0.0.1:6123] failed with java.net.ConnectException: Connection refused: localhost/127.0.0.1:6123
+2025-07-11 11:25:45,333 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Could not resolve ResourceManager address akka.tcp://flink@localhost:6123/user/rpc/resourcemanager_*, retrying in 10000 ms: Could not connect to rpc endpoint under address akka.tcp://flink@localhost:6123/user/rpc/resourcemanager_*.
+2025-07-11 11:25:45,334 WARN  akka.remote.ReliableDeliverySupervisor                       [] - Association with remote system [akka.tcp://flink@localhost:6123] has failed, address is now gated for [50] ms. Reason: [Association failed with [akka.tcp://flink@localhost:6123]] Caused by: [java.net.ConnectException: Connection refused: localhost/127.0.0.1:6123]
+2025-07-11 11:25:55,353 WARN  akka.remote.transport.netty.NettyTransport                   [] - Remote connection to [localhost/127.0.0.1:6123] failed with java.net.ConnectException: Connection refused: localhost/127.0.0.1:6123
+2025-07-11 11:25:55,353 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Could not resolve ResourceManager address akka.tcp://flink@localhost:6123/user/rpc/resourcemanager_*, retrying in 10000 ms: Could not connect to rpc endpoint under address akka.tcp://flink@localhost:6123/user/rpc/resourcemanager_*.
+2025-07-11 11:25:55,353 WARN  akka.remote.ReliableDeliverySupervisor                       [] - Association with remote system [akka.tcp://flink@localhost:6123] has failed, address is now gated for [50] ms. Reason: [Association failed with [akka.tcp://flink@localhost:6123]] Caused by: [java.net.ConnectException: Connection refused: localhost/127.0.0.1:6123]
+2025-07-11 11:26:05,370 WARN  akka.remote.transport.netty.NettyTransport                   [] - Remote connection to [localhost/127.0.0.1:6123] failed with java.net.ConnectException: Connection refused: localhost/127.0.0.1:6123
+2025-07-11 11:26:05,370 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Could not resolve ResourceManager address akka.tcp://flink@localhost:6123/user/rpc/resourcemanager_*, retrying in 10000 ms: Could not connect to rpc endpoint under address akka.tcp://flink@localhost:6123/user/rpc/resourcemanager_*.
+2025-07-11 11:26:05,370 WARN  akka.remote.ReliableDeliverySupervisor                       [] - Association with remote system [akka.tcp://flink@localhost:6123] has failed, address is now gated for [50] ms. Reason: [Association failed with [akka.tcp://flink@localhost:6123]] Caused by: [java.net.ConnectException: Connection refused: localhost/127.0.0.1:6123]
+2025-07-11 11:26:15,382 WARN  akka.remote.transport.netty.NettyTransport                   [] - Remote connection to [localhost/127.0.0.1:6123] failed with java.net.ConnectException: Connection refused: localhost/127.0.0.1:6123
+2025-07-11 11:26:15,382 WARN  akka.remote.ReliableDeliverySupervisor                       [] - Association with remote system [akka.tcp://flink@localhost:6123] has failed, address is now gated for [50] ms. Reason: [Association failed with [akka.tcp://flink@localhost:6123]] Caused by: [java.net.ConnectException: Connection refused: localhost/127.0.0.1:6123]
+2025-07-11 11:26:15,382 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Could not resolve ResourceManager address akka.tcp://flink@localhost:6123/user/rpc/resourcemanager_*, retrying in 10000 ms: Could not connect to rpc endpoint under address akka.tcp://flink@localhost:6123/user/rpc/resourcemanager_*.
+2025-07-11 11:26:25,400 WARN  akka.remote.transport.netty.NettyTransport                   [] - Remote connection to [localhost/127.0.0.1:6123] failed with java.net.ConnectException: Connection refused: localhost/127.0.0.1:6123
+2025-07-11 11:26:25,400 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Could not resolve ResourceManager address akka.tcp://flink@localhost:6123/user/rpc/resourcemanager_*, retrying in 10000 ms: Could not connect to rpc endpoint under address akka.tcp://flink@localhost:6123/user/rpc/resourcemanager_*.
+2025-07-11 11:26:25,401 WARN  akka.remote.ReliableDeliverySupervisor                       [] - Association with remote system [akka.tcp://flink@localhost:6123] has failed, address is now gated for [50] ms. Reason: [Association failed with [akka.tcp://flink@localhost:6123]] Caused by: [java.net.ConnectException: Connection refused: localhost/127.0.0.1:6123]
+2025-07-11 11:26:35,418 WARN  akka.remote.transport.netty.NettyTransport                   [] - Remote connection to [localhost/127.0.0.1:6123] failed with java.net.ConnectException: Connection refused: localhost/127.0.0.1:6123
+2025-07-11 11:26:35,418 WARN  akka.remote.ReliableDeliverySupervisor                       [] - Association with remote system [akka.tcp://flink@localhost:6123] has failed, address is now gated for [50] ms. Reason: [Association failed with [akka.tcp://flink@localhost:6123]] Caused by: [java.net.ConnectException: Connection refused: localhost/127.0.0.1:6123]
+2025-07-11 11:26:35,418 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Could not resolve ResourceManager address akka.tcp://flink@localhost:6123/user/rpc/resourcemanager_*, retrying in 10000 ms: Could not connect to rpc endpoint under address akka.tcp://flink@localhost:6123/user/rpc/resourcemanager_*.
+2025-07-11 11:26:45,441 WARN  akka.remote.transport.netty.NettyTransport                   [] - Remote connection to [localhost/127.0.0.1:6123] failed with java.net.ConnectException: Connection refused: localhost/127.0.0.1:6123
+2025-07-11 11:26:45,442 WARN  akka.remote.ReliableDeliverySupervisor                       [] - Association with remote system [akka.tcp://flink@localhost:6123] has failed, address is now gated for [50] ms. Reason: [Association failed with [akka.tcp://flink@localhost:6123]] Caused by: [java.net.ConnectException: Connection refused: localhost/127.0.0.1:6123]
+2025-07-11 11:26:45,442 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Could not resolve ResourceManager address akka.tcp://flink@localhost:6123/user/rpc/resourcemanager_*, retrying in 10000 ms: Could not connect to rpc endpoint under address akka.tcp://flink@localhost:6123/user/rpc/resourcemanager_*.
+2025-07-11 11:26:55,456 WARN  akka.remote.transport.netty.NettyTransport                   [] - Remote connection to [localhost/127.0.0.1:6123] failed with java.net.ConnectException: Connection refused: localhost/127.0.0.1:6123
+2025-07-11 11:26:55,457 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Could not resolve ResourceManager address akka.tcp://flink@localhost:6123/user/rpc/resourcemanager_*, retrying in 10000 ms: Could not connect to rpc endpoint under address akka.tcp://flink@localhost:6123/user/rpc/resourcemanager_*.
+2025-07-11 11:26:55,457 WARN  akka.remote.ReliableDeliverySupervisor                       [] - Association with remote system [akka.tcp://flink@localhost:6123] has failed, address is now gated for [50] ms. Reason: [Association failed with [akka.tcp://flink@localhost:6123]] Caused by: [java.net.ConnectException: Connection refused: localhost/127.0.0.1:6123]
+2025-07-11 11:27:05,475 WARN  akka.remote.transport.netty.NettyTransport                   [] - Remote connection to [localhost/127.0.0.1:6123] failed with java.net.ConnectException: Connection refused: localhost/127.0.0.1:6123
+2025-07-11 11:27:05,475 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Could not resolve ResourceManager address akka.tcp://flink@localhost:6123/user/rpc/resourcemanager_*, retrying in 10000 ms: Could not connect to rpc endpoint under address akka.tcp://flink@localhost:6123/user/rpc/resourcemanager_*.
+2025-07-11 11:27:05,476 WARN  akka.remote.ReliableDeliverySupervisor                       [] - Association with remote system [akka.tcp://flink@localhost:6123] has failed, address is now gated for [50] ms. Reason: [Association failed with [akka.tcp://flink@localhost:6123]] Caused by: [java.net.ConnectException: Connection refused: localhost/127.0.0.1:6123]
+2025-07-11 11:27:15,499 WARN  akka.remote.transport.netty.NettyTransport                   [] - Remote connection to [localhost/127.0.0.1:6123] failed with java.net.ConnectException: Connection refused: localhost/127.0.0.1:6123
+2025-07-11 11:27:15,499 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Could not resolve ResourceManager address akka.tcp://flink@localhost:6123/user/rpc/resourcemanager_*, retrying in 10000 ms: Could not connect to rpc endpoint under address akka.tcp://flink@localhost:6123/user/rpc/resourcemanager_*.
+2025-07-11 11:27:15,501 WARN  akka.remote.ReliableDeliverySupervisor                       [] - Association with remote system [akka.tcp://flink@localhost:6123] has failed, address is now gated for [50] ms. Reason: [Association failed with [akka.tcp://flink@localhost:6123]] Caused by: [java.net.ConnectException: Connection refused: localhost/127.0.0.1:6123]
+2025-07-11 11:27:25,516 WARN  akka.remote.transport.netty.NettyTransport                   [] - Remote connection to [localhost/127.0.0.1:6123] failed with java.net.ConnectException: Connection refused: localhost/127.0.0.1:6123
+2025-07-11 11:27:25,516 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Could not resolve ResourceManager address akka.tcp://flink@localhost:6123/user/rpc/resourcemanager_*, retrying in 10000 ms: Could not connect to rpc endpoint under address akka.tcp://flink@localhost:6123/user/rpc/resourcemanager_*.
+2025-07-11 11:27:25,516 WARN  akka.remote.ReliableDeliverySupervisor                       [] - Association with remote system [akka.tcp://flink@localhost:6123] has failed, address is now gated for [50] ms. Reason: [Association failed with [akka.tcp://flink@localhost:6123]] Caused by: [java.net.ConnectException: Connection refused: localhost/127.0.0.1:6123]
+2025-07-11 11:27:35,539 WARN  akka.remote.transport.netty.NettyTransport                   [] - Remote connection to [localhost/127.0.0.1:6123] failed with java.net.ConnectException: Connection refused: localhost/127.0.0.1:6123
+2025-07-11 11:27:35,539 WARN  akka.remote.ReliableDeliverySupervisor                       [] - Association with remote system [akka.tcp://flink@localhost:6123] has failed, address is now gated for [50] ms. Reason: [Association failed with [akka.tcp://flink@localhost:6123]] Caused by: [java.net.ConnectException: Connection refused: localhost/127.0.0.1:6123]
+2025-07-11 11:27:35,540 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Could not resolve ResourceManager address akka.tcp://flink@localhost:6123/user/rpc/resourcemanager_*, retrying in 10000 ms: Could not connect to rpc endpoint under address akka.tcp://flink@localhost:6123/user/rpc/resourcemanager_*.
+2025-07-11 11:27:45,555 WARN  akka.remote.transport.netty.NettyTransport                   [] - Remote connection to [localhost/127.0.0.1:6123] failed with java.net.ConnectException: Connection refused: localhost/127.0.0.1:6123
+2025-07-11 11:27:45,556 WARN  akka.remote.ReliableDeliverySupervisor                       [] - Association with remote system [akka.tcp://flink@localhost:6123] has failed, address is now gated for [50] ms. Reason: [Association failed with [akka.tcp://flink@localhost:6123]] Caused by: [java.net.ConnectException: Connection refused: localhost/127.0.0.1:6123]
+2025-07-11 11:27:45,556 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Could not resolve ResourceManager address akka.tcp://flink@localhost:6123/user/rpc/resourcemanager_*, retrying in 10000 ms: Could not connect to rpc endpoint under address akka.tcp://flink@localhost:6123/user/rpc/resourcemanager_*.
+2025-07-11 11:27:55,575 WARN  akka.remote.transport.netty.NettyTransport                   [] - Remote connection to [localhost/127.0.0.1:6123] failed with java.net.ConnectException: Connection refused: localhost/127.0.0.1:6123
+2025-07-11 11:27:55,576 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Could not resolve ResourceManager address akka.tcp://flink@localhost:6123/user/rpc/resourcemanager_*, retrying in 10000 ms: Could not connect to rpc endpoint under address akka.tcp://flink@localhost:6123/user/rpc/resourcemanager_*.
+2025-07-11 11:27:55,576 WARN  akka.remote.ReliableDeliverySupervisor                       [] - Association with remote system [akka.tcp://flink@localhost:6123] has failed, address is now gated for [50] ms. Reason: [Association failed with [akka.tcp://flink@localhost:6123]] Caused by: [java.net.ConnectException: Connection refused: localhost/127.0.0.1:6123]
+2025-07-11 11:27:58,398 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - RECEIVED SIGNAL 15: SIGTERM. Shutting down as requested.
+2025-07-11 11:27:58,398 INFO  org.apache.flink.runtime.blob.TransientBlobCache             [] - Shutting down BLOB cache
+2025-07-11 11:27:58,399 INFO  org.apache.flink.runtime.blob.PermanentBlobCache             [] - Shutting down BLOB cache
+2025-07-11 11:27:58,399 INFO  org.apache.flink.runtime.state.TaskExecutorLocalStateStoresManager [] - Shutting down TaskExecutorLocalStateStoresManager.
+2025-07-11 11:27:58,399 INFO  org.apache.flink.runtime.state.TaskExecutorStateChangelogStoragesManager [] - Shutting down TaskExecutorStateChangelogStoragesManager.
