@@ -406,6 +406,11 @@ http://localhost:8081/overview
 
 ### 체크포인트 관련 모니터링
 http://localhost:8081/#/job/running/6e2232e6a55ae5e09e0e1c26aefdecec/checkpoints
+<br>
+
+<img width="1428" height="750" alt="image" src="https://github.com/user-attachments/assets/c1061eee-fa99-4f1f-9005-8d7b310617a4" />
+<img width="1421" height="948" alt="image" src="https://github.com/user-attachments/assets/c11a06cb-0aa7-466d-ad77-eac77ec57a1c" />
+<img width="1391" height="765" alt="image" src="https://github.com/user-attachments/assets/d4ec52a8-1f4d-49e1-a315-1f436a14af40" />
 
 ### 클러스터 모니터링 웹 UI 확인
 flink-demo/flink-dashboard.html
