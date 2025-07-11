@@ -398,6 +398,18 @@ public void processElement(UserEvent value, Context ctx, Collector<String> out) 
 - [Flink Checkpointing 가이드](https://nightlies.apache.org/flink/flink-docs-stable/docs/ops/state/checkpoints/)
 - [Flink State Backends](https://nightlies.apache.org/flink/flink-docs-stable/docs/ops/state/state_backends/)
 
+
+## 플링크 클러스터 모니터링하기
+### 전반적인 클러스터 모니터링
+http://localhost:8081/
+http://localhost:8081/overview
+
+### 체크포인트 관련 모니터링
+http://localhost:8081/#/job/running/6e2232e6a55ae5e09e0e1c26aefdecec/checkpoints
+
+### 클러스터 모니터링 웹 UI 확인
+flink-demo/flink-dashboard.html
+
 ## 🤝 기여하기
 
 1. Fork the Project
